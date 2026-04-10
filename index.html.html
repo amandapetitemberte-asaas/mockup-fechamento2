@@ -230,9 +230,10 @@
   }
   .input-box {
     border: 1px solid #ddd; border-radius: 6px;
-    padding: 10px 14px; font-size: 13px; color: #999;
+    font-size: 13px; color: #999;
     margin-bottom: 8px; width: 100%;
-    display: flex; align-items: center; justify-content: space-between;
+    display: flex; align-items: center;
+    overflow: hidden;
   }
   .input-tabs { display: flex; gap: 6px; }
   .input-tab {
@@ -700,9 +701,9 @@
 
     <!-- INPUT -->
     <div class="input-area">
-      <div class="input-box" style="padding:0;">
-        <input id="chat-input" type="text" placeholder="Ask your question..." style="border:none;outline:none;flex:1;font-size:13px;color:#333;padding:10px 14px;background:transparent;width:100%;" onkeydown="if(event.key==='Enter')sendMessage()" />
-        <button class="send-btn" onclick="sendMessage()" style="padding:0 14px;">➤</button>
+      <div class="input-box" style="padding:0;display:flex;align-items:center;">
+        <input id="chat-input" type="text" placeholder="Ask your question..." style="border:none;outline:none;flex:1;font-size:13px;color:#333;padding:10px 14px;background:#fff;width:100%;border-radius:6px;" onkeydown="if(event.key==='Enter')sendMessage()" />
+        <button class="send-btn" onclick="sendMessage()" style="padding:0 14px;flex-shrink:0;">➤</button>
       </div>
       <div style="display:flex;justify-content:space-between;align-items:center;">
         <div class="input-tabs">
